@@ -36,7 +36,7 @@
 .content .main .sign-in {
     width: 100%;
     padding: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.253);
+    border: 1px solid rgba(119, 119, 119, 0.378);
     height: auto;
     margin-top: 30px;
     padding-bottom: 16px !important;
@@ -90,7 +90,7 @@
     margin-top: 10px;
     height: auto;
     padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.253);
+    border: 1px solid rgba(119, 119, 119, 0.378);
 }
 
 .content .regis span {
