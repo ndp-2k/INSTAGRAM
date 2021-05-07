@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.content {
+    margin: auto;
+    margin-top: 90px;
+    width: 935px;
+    height: 722px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.content .left {
+    width: 454px;
+    height: 618px;
+    background-image: url(./img/login/phonereal.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position:relative;
+}
+#slideshow {
+    position: absolute;
+    overflow: hidden;
+    width: 240px;
+    height: 472px;
+    bottom: 46px;
+    right: 63px;
+  }
+ .slide-wrapper {   
+    width: 2912px;
+    -webkit-animation: slide 9s ease infinite;
+  }
+ .slide {
+    float: left;
+    width: 240px;
+    height: 472px;
+  }
+ @-webkit-keyframes slide {
+    0% {margin-left: 0px;}
+    20% {margin-left: -240px;}
+    40% {margin-left: -480px;}
+    60% {margin-left: -720px;}
+    80% {margin-left: -960px;}
+  }
+
+.content .right {
+    width: 350px;
+    height: 618px;
+    text-align: center;
+}
+
+.content .right .logo {
+    width: 175px;
+    height: 51px;
+    background-image: url(./Instagram-Logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.content .right input {
+    height: 40px;
+    font-size: 13px !important;
+}
+
+.content .right .sign-in {
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+    height: auto;
+    margin-top: 30px;
+    padding-bottom: 16px !important;
+}
+
+.content .right .sign-in .or {
+    font-size: 14px;
+    margin: 16px 0;
+    font-weight: 500;
+    color: rgba(122, 122, 122, 0.767);
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .right .sign-in .or-l {
+    width: 100px;
+    border-top: 1px solid rgba(122, 122, 122, 0.301);
+    margin-top: 10px;
+}
+
+.content .right .sign-in i {
+    color: rgba(11, 11, 97, 0.767);
+    font-size: 20px;
+}
+
+.content .right .sign-in span {
+    color: rgba(11, 11, 97, 0.767);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.content .right .sign-in .fb a {
+    color: rgba(11, 11, 97, 0.767);
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.content .right .sign-in a {
+    display: block;
+    margin-top: 20px;
+    color: rgba(11, 11, 97, 0.767);
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.content .right .sign-in .john {
+    font-weight: 500;
+    padding: 6px !important;
+    font-size: 13px !important;
+    text-decoration: none;
+    background-color: rgba(32, 121, 238, 0.356);
+    border: none;
+}
+
+.content .right .regis {
+    margin-top: 10px;
+    height: auto;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+}
+
+.content .right .regis span {
+    font-size: 14px;
+}
+
+.content .right .regis a {
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.content .right .dowload {}
+
+.content .right .dowload p {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.content .right .dowload .appstore {
+    display: inline-block;
+    width: 136px;
+    height: 40px;
+    background-size: cover;
+    background-image: url(./img/login/appstore.png);
+}
+
+.content .right .dowload .ggplay {
+    display: inline-block;
+    width: 136px;
+    height: 40px;
+    background-size: cover;
+    background-image: url(./img/login/ggplay.png);
+}
+
+.footer .container {}
+
+.footer .container .f1 .text {
+    font-size: 12px;
+    color: rgba(65, 65, 65, 0.658);
+    margin: 0 10px;
+}
+
+.footer .container .f1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .container .f2 .text {
+    font-size: 12px;
+    color: rgba(65, 65, 65, 0.658);
+    margin: 0 10px;
+}
+
+.footer .container .f2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.footer .container .f3 .text {
+    font-size: 12px;
+    color: rgba(65, 65, 65, 0.658);
+    margin: 0 10px;
+}
+
+.footer .container .f3 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
