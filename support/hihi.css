@@ -1,0 +1,132 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.post {
+    width: 614px;
+    border: 1px rgba(118, 118, 118, 0.515) solid;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+body {
+    background-color: rgba(250, 235, 215, 0.035);
+}
+
+.post .header-p {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.post .header-p .name-avt {
+    display: flex;
+}
+
+.post .name-post {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.post .header-p .avt-post {
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    background-image: url(../login.html/img/login/1.jpg);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post .btn-post {
+    float: right;
+    width: 40px;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+}
+
+.post .img-post {
+    margin-top: 5px;
+    background-color: aquamarine;
+    width: 614px;
+    height: 640px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.post .emoji {
+    width: 614px;
+    height: 45px;
+    padding: 5px 10px;
+}
+
+.post .emoji .emoji-l {
+    float: left;
+    width: 200px;
+    justify-content: space-between;
+    font-size: 28px;
+    margin-right: 20px;
+}
+
+.post .emoji .emoji-r {
+    float: right;
+    font-size: 28px;
+}
+
+.post .content {
+    padding: 0 10px;
+}
+
+.post .content .like {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.post .content .status {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 450px;
+}
+
+.post .content .time {
+    font-size: 12px;
+    font-weight: 450px;
+    color: rgba(79, 79, 79, 0.289);
+}
+
+.post .content .name-status {
+    display: flex;
+}
+
+.post .cmt-post {
+    height: 50px;
+    border-top: 1px solid rgba(119, 119, 119, 0.254);
+    padding: 10px;
+    display: flex;
+    align-content: center;
+}
+
+.post .cmt-post .sticker {
+    font-size: 28px;
+}
+
+.post .cmt-post .cmt {
+    padding-left: 8px;
+    width: 525px;
+    border: none;
+}
+
+.post .cmt-post span {
+    color: rgba(0, 89, 255, 0.302);
+    font-weight: 500;
+}
+.post .name-post-cmt {
+    font-weight: 500;
+    font-size: 14px;
+}
