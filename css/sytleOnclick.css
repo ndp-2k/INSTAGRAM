@@ -1,0 +1,33 @@
+
+/* .posi{
+    position: relative;
+}
+.container-2{
+    position: absolute;
+}
+.container-3{
+    position: absolute;
+}
+.container-4{
+    position: absolute;
+} */
+.delete{
+    display: none;
+}
+.add-color{
+    color: #262626 !important;
+    /* border-top: 1px solid #262626; */
+}
+.add-icon{
+    fill: #262626 !important;
+}
+.add-border{
+    border-top: 1px solid #262626;
+}
+.add-hashtag{
+    color: #00376b !important;
+}
+.add-border-hashtag{
+    border-bottom: 1px solid #262626 !important;
+}
+
