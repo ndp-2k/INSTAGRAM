@@ -23,7 +23,7 @@
     <title>Document</title>
 </head>
 
-<body onload="onload()" >
+<body>
     <div class="content">
         <div class="left">
             <div id="slideshow">
@@ -40,16 +40,16 @@
 
             <div class="sign-in">
                 <div class="logo"></div>
-
-                <div class="form-group">
-                    <input type="email" class="form-control" id="username"
-                        placeholder="Số điện thoại, tên người dùng hoặc email">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="password" placeholder="Mật khẩu">
-                </div>
-                <button id="signin" class="btn btn-primary btn-lg btn-block john">Đăng nhập</button>
-
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="username"
+                            placeholder="Số điện thoại, tên người dùng hoặc email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" placeholder="Mật khẩu">
+                    </div>
+                    <button id="signin" type="submit" class="btn btn-primary btn-lg btn-block john">Đăng nhập</button>
+                </form>
                 <div class="or">
                     <div class="or-l"></div>
                     HOẶC
@@ -103,8 +103,7 @@
             </div>
         </div>
     </div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-    <script src="./login.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,57 @@
+.card-row{
+    width: 935px;
+}
+.card-row .col{
+    padding: 0px;
+}
+.card-new{
+    width: 293px;
+    height: 293px;
+    background-size: cover;
+    border-radius: 0;
+    margin-right: 0;
+    margin: 0px;
+}
+.card-row .card{
+    margin-right: 0;
+    padding: 0;
+}
+.card-row .card-img-top{
+    border-radius: 0;
+    position: absolute;
+    /* top: -35px; */
+}
+.card-row .card-new:hover .card-bacgr{
+    display: block;
+    width: 293px;
+    height: 293px;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 3;
+    position: absolute;
+}
+.card-row .card-new:hover .card-icon{
+    display: inline-block;
+    width: 293px;
+    height: 293px;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.card-row .card-new:hover .card-icon span{
+    font-weight: 600;
+}
+.card-row .card-bacgr{
+    display: none;
+}
+.card-row .card-icon{
+    display: none;
+}
+.card-row .fas{
+    margin-right: 5px;
+}
+.card-row .fa-comment{
+    margin-left: 30px;
+}
