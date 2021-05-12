@@ -1,0 +1,86 @@
+
+.suggest-updown{
+    border-radius: 5px;
+    border: #dbdbdb solid 1px;
+    padding: 20px 0 20px 25px;
+    background-color: white;
+    width: 935px;
+
+}
+.grp{
+    display: flex;
+    overflow-x: auto;
+}
+.card{
+    height: auto;
+    margin-right: 30px;
+    min-width: 176px;
+    width: 176px;
+    height: 198px;
+    border: 1px solid #dbdbdb;
+    overflow: hidden;
+}
+.card-dele{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.card-del{
+    width: 34px;
+    height: 22px;
+    padding: 12px 12px 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+.card-del-icon{
+    background-image: url("https://www.instagram.com/static/bundles/metro/sprite_core_32f0a4f27407.png/32f0a4f27407.png");
+    background-position: -387px -321px;
+    height: 10px;
+    width: 10px;
+    background-repeat: no-repeat;
+    border: 0;
+    background-color: white;
+}
+.card-body, .card-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-title{
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.card-text{
+    font-size: 14px;
+    color: #8e8e8e;
+    padding: 10px 0;
+    margin: -10px 0 2px;
+}
+.btn-primary{
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px 9px;
+    width: 134px;
+    height: auto;
+}
+
+.list-suggest .list-title{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.list-text-sug{
+    color: #8e8e8e;
+    font-weight: 500;
+    font-size: 14px;
+}
+.list-all-btn{
+    border: 0;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0095f6;
+    margin-right: 20px;
+}
+
