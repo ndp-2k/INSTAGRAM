@@ -93,8 +93,15 @@
   ],
   "user_login": [
     {
-      "id": 1,
-      "userId": 1
+      "userid": 1,
+      "username": "phofng",
+      "password": "123",
+      "name": "Nguyễn Đăng Phòng",
+      "email": "nguyendangphong2712@gmail.com",
+      "avt": "https://images.unsplash.com/photo-1611095973763-414019e72400?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      "follow": 99,
+      "follower": 99,
+      "id": 1
     }
   ],
   "post": [

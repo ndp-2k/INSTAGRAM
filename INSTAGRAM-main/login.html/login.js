@@ -10,7 +10,8 @@ signin.onclick = function () {
             json.forEach(element => {
                 if ((element.username == username.value || element.email == username.value) && element.password == password.value) {
                     window.location.replace("http://127.0.0.1:5500/instagram-home/index.html");
-                    updateOnline(element.id);
+                    updateOnline(element);
+                    console.log(element);
                 }
             }
 
@@ -25,8 +26,14 @@ function updateOnline(a) {
     fetch('http://localhost:3000/user_login/1', {
         method: 'PUT',
         body: JSON.stringify({
-            id: 1,
-            userId: a,
+            userid: a.id,
+            username: a.username,
+            password:a.password,
+            name:a.name,
+            email:a.email,
+            avt:a.avt,
+            follow:a.follow,
+            follower:a.follower
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',

@@ -36,7 +36,7 @@ a {
   margin-right: 30px;
   text-align: center;
 }
-.avatar img {
+.avatar .div-avt {
   border-radius: 50%;
   margin: 0 71px;
 }

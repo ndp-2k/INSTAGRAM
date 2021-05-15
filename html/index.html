@@ -32,7 +32,7 @@
     
 
 </head>
-<body>
+<body onload="onload()">
     <!-- <div class="fix-header"> -->
  <!-- </div> -->
     
@@ -187,7 +187,7 @@
                                                      style="width: 44px; height: 44px;">
                                                      <img alt="Ảnh đại diện của mitom.song.35" class="h-100 "
                                                          crossorigin="anonymous" data-testid="user-avatar"
-                                                         draggable="false" src="./assets/image/header-end.jpg">
+                                                         draggable="false" src="../instagram-home/assets/image/header-end.jpg">
                                                  </span>
                                              </div>
                                              <div class="header__love-content">
@@ -203,7 +203,7 @@
                                              </div>
                                              <div class="header__love-img">
                                                  <img crossorigin="anonymous" class="FFVAD"
-                                                     src="./assets/image/header__love-img.jpg"
+                                                     src="../instagram-home/assets/image/header__love-img.jpg"
                                                      style="object-fit: cover;">
                                              </div>
                                          </div>
@@ -304,12 +304,12 @@
         <div class="container-1">
             <div class="component-1">
                 <div class="avatar">
-                    <img src="../anh/avatar.jpg" style="height: 150px; width: 150px;" alt="avatar">
+                    <div class="div-avt" id="avt" style="height: 150px; width: 150px;"></div>
                 </div>
                     
                 <div class="info">
                     <div class="user">
-                        <h2 id="username" class="username">hai4501</h2>
+                        <h2 id="username" class="username"></h2>
                         <a class="change" href="#">Chỉnh sửa trang cá nhân</a>
                         <a class="icon" href="#">
                             <svg aria-label="Tùy chọn" class="_8-yf5 " data-bs-toggle="modal" data-bs-target="#fix" fill="#262626" height="24" viewBox="0 0 48 48" width="24">
@@ -337,25 +337,25 @@
                     </div>
                     <div class="follow">
                         <div class="post">
-                            <span class="number">0</span>
+                            <span  class="number">1</span>
                             <span class="title tit1">bài viết</span>
                         </div>
                         <a class="post list" href="#">
                             <div data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <span class="number">184</span>
+                                <span id="followeruser" class="number"></span>
                                 <span class="title tit1">người theo dõi</span>
                             </div>
                         </a>
                         <a class="post list" href="#">
                             <div data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                 <span class="title">Đang theo dõi</span>
-                                <span class="number">368</span>
+                                <span id="followuser" class="number"></span>
                                 <span class="title">người dùng</span>
                             </div>
                         </a>
                     </div>
-                    <div class="name">
-                        <h1>Vũ Đức Hải</h1> 
+                    <div class="name" id="nameuser">
+                        <h1></h1> 
                     </div>
                 </div>
             
@@ -936,7 +936,7 @@
   </div>
 
 
-
+<script src="../js/loadtcn.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" 
     crossorigin="anonymous"></script>
