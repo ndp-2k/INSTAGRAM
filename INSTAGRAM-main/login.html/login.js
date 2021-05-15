@@ -8,14 +8,30 @@ signin.onclick = function () {
         .then((response) => response.json())
         .then((json) => {
             json.forEach(element => {
-                if((element.username==username.value||element.email==username.value)&&element.password==password.value){
-                    window.location.replace("http://127.0.0.1:5500/ban%20be/friend.html"); 
-                console.log("ok");
+                if ((element.username == username.value || element.email == username.value) && element.password == password.value) {
+                    window.location.replace("http://127.0.0.1:5500/instagram-home/index.html");
+                    updateOnline(element.id);
                 }
             }
-            
+
             );
         });
 
-    
+
+}
+
+
+function updateOnline(a) {
+    fetch('http://localhost:3000/user_login/1', {
+        method: 'PUT',
+        body: JSON.stringify({
+            id: 1,
+            userId: a,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
 }
