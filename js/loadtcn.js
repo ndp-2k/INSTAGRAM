@@ -14,8 +14,8 @@ function onload() {
             console.log(avt);
             username.innerHTML = json.username;
             followw.innerHTML = json.follow;
-            avt.style.backgroundImage="url('"+json.avt+"')";
-            avt.style.backgroundSize="cover";
+            avt.style.backgroundImage = "url('" + json.avt + "')";
+            avt.style.backgroundSize = "cover";
             follower.innerHTML = json.follower;
             name.innerHTML = json.name;
         });
