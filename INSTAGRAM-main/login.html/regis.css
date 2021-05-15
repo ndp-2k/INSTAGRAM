@@ -1,0 +1,189 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.content {
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.content .main {
+    width: 350px;
+    height: 618px;
+    display: inline-block;
+}
+
+.content .main .sign-in .logo {
+    width: 175px;
+    height: 51px;
+    background-image: url(./Instagram-Logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+}
+
+.content .main .sign-in .text {
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.419);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.content .main .sign-in {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid rgba(119, 119, 119, 0.378);
+    height: auto;
+    margin-top: 30px;
+    padding-bottom: 16px !important;
+}
+
+.content .main .sign-in input {
+    margin-top: 6px;
+    background-color: rgba(162, 162, 162, 0.049);
+    height: 38px;
+    font-size: 12px !important;
+}
+
+.content .sign-in .or {
+    font-size: 14px;
+    margin: 16px 0;
+    font-weight: 500;
+    color: rgba(122, 122, 122, 0.767);
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .sign-in .or-l {
+    width: 100px;
+    border-top: 1px solid rgba(122, 122, 122, 0.59);
+    margin-top: 10px;
+}
+
+.content .main .sign-in .chinhsach {
+    margin: 20px 10px;
+    display: block;
+    font-size: 12px;
+    color: rgba(124, 124, 124);
+}
+
+.content .main .sign-in .chinhsach a {
+    font-weight: 500;
+    color: rgba(124, 124, 124, 0.774);
+    text-decoration: none;
+}
+
+.content .sign-in .regisbtn {
+    font-weight: 490;
+    padding: 6px !important;
+    font-size: 13px !important;
+    text-decoration: none;
+    background-color: rgba(32, 121, 238, 0.356);
+    border: none;
+}
+
+.content .regis {
+    margin-top: 10px;
+    height: auto;
+    padding: 20px;
+    border: 1px solid rgba(119, 119, 119, 0.378);
+}
+
+.content .regis span {
+    font-size: 14px;
+}
+
+.content .regis a {
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.content .dowload {
+    margin: 20px 0;
+}
+
+.content .dowload p {
+    font-size: 14px;
+}
+
+.content .dowload .appstore {
+    display: inline-block;
+    width: 136px;
+    height: 40px;
+    background-size: cover;
+    background-image: url(./img/login/appstore.png);
+}
+
+.content .dowload .ggplay {
+    display: inline-block;
+    width: 136px;
+    height: 40px;
+    background-size: cover;
+    background-image: url(./img/login/ggplay.png);
+}
+
+.footer .container {}
+
+.footer .container .f1 .text {
+    font-size: 12px;
+    color: rgba(65, 65, 65, 0.658);
+    margin: 0 10px;
+    margin-top: 50px;
+}
+
+.footer .container .f1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .container .f2 .text {
+    font-size: 12px;
+    color: rgba(65, 65, 65, 0.658);
+    margin: 10px 10px;
+}
+
+.footer .container .f2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.footer .container .f3 .text {
+    font-size: 12px;
+    color: rgba(65, 65, 65, 0.658);
+    margin: 0 10px;
+}
+
+.footer .container .f3 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.content .main .sign-in .fbb .john {
+    font-weight: 500;
+    padding: 6px !important;
+    font-size: 14.5px !important;
+    text-decoration: none;
+    background-color: #0095f6;
+    border: none;
+}
+
+/* .content .main .sign-in .fbb .john i {
+    font-size: 16px;
+    color: rgb(255, 255, 255) !important;
+}
+
+.content .main .sign-in .fbb .john span {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 12px;
+} */

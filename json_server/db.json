@@ -1,0 +1,138 @@
+{
+  "User": [
+    {
+      "id": 1,
+      "username": "phofng",
+      "password": "123",
+      "name": "Nguyễn Đăng Phòng",
+      "email": "nguyendangphong2712@gmail.com",
+      "avt": "https://images.unsplash.com/photo-1611095973763-414019e72400?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      "follow": 99,
+      "follower": 99
+    },
+    {
+      "id": 2,
+      "username": "follower",
+      "password": "6969",
+      "name": "Phương Anh",
+      "email": "phuonganh@gmail.com",
+      "avt": "https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "follow": 99,
+      "follower": 99
+    },
+    {
+      "id": 3,
+      "username": "ngoc",
+      "password": "123456",
+      "name": "Như Ngọc",
+      "email": "nhungoc@gmail.com",
+      "avt": "https://images.unsplash.com/photo-1620734885969-a3c21e9f34c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1101&q=80",
+      "follow": 99,
+      "follower": 99
+    },
+    {
+      "id": 4,
+      "username": "klinh",
+      "password": "123456",
+      "name": "Khánh Linh",
+      "email": "kanhlinh@gmail.com",
+      "avt": "https://images.unsplash.com/photo-1618417759257-7e6dbed9f115?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "follow": 99,
+      "follower": 99
+    },
+    {
+      "id": 5,
+      "username": "hnhung",
+      "password": "123456",
+      "name": "Hồng Nhung",
+      "email": "hnhung@gmail.com",
+      "avt": "https://images.unsplash.com/photo-1620591314915-528aeda98e38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+      "follow": 99,
+      "follower": 99
+    },
+    {
+      "id": 6,
+      "username": "meomeo",
+      "password": "123456",
+      "name": "Mew Mew",
+      "email": "meomeo@gmail.com",
+      "avt": "https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "follow": 99,
+      "follower": 99
+    },
+    {
+      "id": 7,
+      "username": "lewlew",
+      "password": "123456",
+      "name": "Lew Lew",
+      "email": "lewlew@gmail.com",
+      "avt": "https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+      "follow": 99,
+      "follower": 99
+    },
+    {
+      "id": 8,
+      "username": "ntrinh",
+      "password": "123456",
+      "name": "Ngọc Trinh",
+      "email": "ntrinh@gmail.com",
+      "avt": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "follow": 99,
+      "follower": 99
+    },
+    {
+      "id": 9,
+      "username": "hoaian",
+      "password": "123456",
+      "name": "Hoài An",
+      "email": "hoaian@gmail.com",
+      "avt": "https://images.unsplash.com/photo-1440589473619-3cde28941638?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "follow": 99,
+      "follower": 99
+    }
+  ],
+  "user_login": [
+    {
+      "id": 1,
+      "userId": 2
+    }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "userId": 1,
+      "img": "https://images.unsplash.com/photo-1611095973763-414019e72400?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      "title": "Stay safe and healthy, my HaNoi.",
+      "time": "test",
+      "like": "[5,6,8,7,9]",
+      "comment": "[{use id: 1; title: Mình xinh quá;like:[1,5,6,8,9]}]"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "img": "/instagram-home/assets/image/post_1.jpg",
+      "title": "Một chút trà cho tâm hồn thanh thản",
+      "time": "8 giờ trước",
+      "like": "[1,5,6,8,7,9]",
+      "comment": ""
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "img": "/instagram-home/assets/image/post_2.jpg",
+      "title": "hoa baby tượng trưng cho ty chúng ta",
+      "time": "9h trước",
+      "like": "[3,5,6,8,7,9]",
+      "comment": ""
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "img": "/instagram-home/assets/image/image_post.jpg",
+      "title": "flow",
+      "time": "10h trước",
+      "like": "[5,2,5,6,8,7,9]",
+      "comment": "[{use id: 4; title: Mình xinh quá;like:[1,5,6,8,9]}]"
+    }
+  ]
+}

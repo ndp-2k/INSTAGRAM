@@ -1,0 +1,395 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0;
+}
+body {
+  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+}
+.container {
+  padding: 30px 20px 0;
+  width: 935px;
+  height: 661px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-1 .component-1 {
+  display: flex;
+  height: 150px;
+  width: 935px;
+  background-color: #fafafa;
+  margin-bottom: 44px;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.avatar {
+  margin-right: 30px;
+  text-align: center;
+}
+.avatar img {
+  border-radius: 50%;
+  margin: 0 71px;
+}
+.info {
+  width: 514px;
+}
+.user {
+  margin-bottom: 20px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.username {
+  display: inline;
+  color: #262626;
+  font-size: 28px;
+  font-weight: 300;
+  margin: -5px 0 -6px;
+}
+.user .change {
+  border: 1px solid #dbdbdb;
+  padding: 5px 9px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #262626;
+  margin-left: 20px;
+  text-align: center;
+  width: auto;
+}
+.user .icon {
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+.follow {
+  display: flex;
+  margin-bottom: 20px;
+}
+.follow .post .number {
+  font-weight: bold;
+}
+.tit1 {
+  margin-right: 40px;
+}
+.name h1 {
+  font-size: 16px;
+  line-height: 24px;
+  font: inherit;
+  font-weight: 600;
+}
+
+.container-1 .component-2 {
+  width: 935px;
+  height: 53px;
+  background-color: #fafafa;
+  border-top: 1px solid #dbdbdb;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.component-2 .compo {
+  margin-right: 60px;
+}
+.component-2 .direc .tab {
+  height: 52px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container-1 .text {
+  color: #8e8e8e;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-left: 6px;
+  font: inherit;
+  font-size: 12px;
+}
+.component-2 svg {
+  fill: #8e8e8e;
+}
+
+.container-1 .follow .list:hover{
+  color: black;
+}
+
+.modal-content{
+  border-radius: 12px;
+  width: 400px;
+  height: 400px;
+  /* width: 600px;
+  height: 600px; */
+}
+.modal-header{
+  height: 43px;
+}
+.modal-header .emty{
+  width: 48px;
+}
+.modal-header .modal-title{
+  font-size: 16px;
+}
+.modal-header .btn-close{
+  margin-left: 0;
+}
+.modal-body{
+  padding: 0;
+}
+.modal-body ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.modal-body .modal-follow{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 16px;
+}
+.modal-body .modal-img{
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+.modal-body .modal-name{
+  font-size: 14px;
+  height: 40px;
+  width: 257px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-body .modal-name .modal-name-id{
+  font-weight: 500;
+}
+.modal-body .modal-name .modal-name-id :hover{
+  color: #262626;
+}
+.modal-body .modal-name .modal-name-name{
+  color: #8e8e8e;
+
+}
+.modal-body .modal-del{
+  border: 1px solid #dbdbdb;
+  background: white;
+  width: 45px;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+
+.dropdown:hover .down{
+  display: block;
+}
+.dropdown-menu{
+  height: 370px;
+  width: 390px;
+  border-radius: 12px;
+  padding: 0px;
+}
+
+
+.dropdown-info{
+  height: 90px;
+}
+.dropdown-info-follow{
+  display: flex;
+  flex-direction: row;
+}
+.dropdown-info-img{
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown-info-name{
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #262626;
+  margin-top: 15px;
+}
+.dropdown-info-text{
+  color: #8e8e8e;
+  font-weight: 400;
+}
+
+
+.dropdown-new{
+  height: 90px;
+  border-top: solid 1px #dbdbdb;
+}
+.dropdown-new-ul{
+  display: flex;
+  flex-direction: row;
+}
+.dropdown-new-li{
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #8e8e8e;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 15px;
+}
+.dropdown-num{
+  font-weight: 500;
+  color: #262626;
+}
+
+
+.dropdown-pic{
+  height: 130px;
+  border-top: solid 1px #dbdbdb;
+  display: flex;
+}
+.dropdown-pic-img{
+  width: 130px;
+  height: 129px;
+}
+
+.dropdown-btn{
+  height: 60px;
+  border-top: solid 1px #dbdbdb;
+
+}
+.dropdown-btn-ul{
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown-btn-li{
+  border: solid 1px #dbdbdb;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+}
+.dropdown-btn-li button{
+  border: 0;
+  background-color: white;
+  font-size: 1rem;
+  color: #212529;
+  font-weight: 500;
+  width: 160px;
+}
+.dropdown-btn .btn1{
+  width: 160px;
+  margin-right: 10px;
+}
+.dropdown-btn .btn1 button{
+  width: 160px;
+}
+.dropdown-btn .btn2{
+  width: 190px;
+}
+.dropdown-btn .btn2 button{
+  width: 190px;
+}
+
+
+
+
+.exampleModal-1 .modal-header-nd{
+  display: flex;
+  flex-direction: row;
+}
+.modal-header-nd a{
+  width: 195px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+
+}
+.modal-header-nd a:hover{
+  color: #262626;
+}
+.modal-header-nd .modal-title{
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #b3c3d3;
+}
+.exampleModal-1 .modal-del {
+  width: 120px;
+  font-size: 14px;
+}
+
+
+.exampleModal2 .modal-content{
+  height: auto;
+  /* overflow: hidden; */
+}
+.exampleModal2 .modal-end{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.exampleModal2 .modal-end-btn{
+  border: 0px;
+  background-color: white;
+  color: #0095f6;
+}
+.exampleModal2 .modal-end-text{
+  font-weight: 600;
+  font-size: 14px;
+
+}
+/* .exampleModal2 .spe:hover {
+  color: red !important;
+
+} */
+
+
+
+/* .dropdown-info-id a:hover{
+  color: #262626 !important;
+} */
+.dropdown-info-text:hover{
+  color: #8e8e8e !important;
+}
+.dropdown-new-li span:hover{
+  color: #8e8e8e !important;
+}
+
+/* .dr-text:hover{
+  color: #8e8e8e !important;
+} */
+.dropdown-new-li:hover{
+  color: #8e8e8e !important;
+}
+
+.dropdown-num:hover{
+  color: #262626 !important;
+}
+
+.dropdown-pic-img:hover{
+  opacity: 0.8;
+}

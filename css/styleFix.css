@@ -1,0 +1,20 @@
+.modal-content-fix{
+    height: 480px;
+}
+.fix{
+    width: 400px;
+    height: 480px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0;
+}
+.fix button{
+    font-size: 14px;
+    width: 400px;
+    height: 48px;
+    border: 0;
+    border-bottom: 1px solid #dbdbdb;
+    background-color: #fff;
+
+}

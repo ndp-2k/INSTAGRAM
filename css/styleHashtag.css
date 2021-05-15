@@ -1,0 +1,30 @@
+.hashtag .child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 390px;
+}
+.hashtag .icon{
+    font-size: 80px;
+    font-weight: 100;
+    border-radius: 50%;
+    border: solid 1.5px #262626;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hashtag .icon .text{
+    padding: 0px;
+    margin: 0;
+    text-align: center;
+}
+.hashtag .save .text{
+    font-size: 22px;
+}
+.hashtag .divText .text{
+    font-size: 14px;
+}
