@@ -8,7 +8,13 @@
       "email": "nguyendangphong2712@gmail.com",
       "avt": "https://images.unsplash.com/photo-1611095973763-414019e72400?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
       "follow": 99,
-      "follower": 99
+      "follower": 99,
+      "postsave": [
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": 2,
@@ -18,7 +24,14 @@
       "email": "phuonganh@gmail.com",
       "avt": "https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
       "follow": 99,
-      "follower": 99
+      "follower": 99,
+      "postsave": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": 3,
@@ -28,7 +41,13 @@
       "email": "nhungoc@gmail.com",
       "avt": "https://images.unsplash.com/photo-1620734885969-a3c21e9f34c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1101&q=80",
       "follow": 99,
-      "follower": 99
+      "follower": 99,
+      "postsave": [
+        2,
+        1,
+        4,
+        5
+      ]
     },
     {
       "id": 4,
@@ -38,7 +57,13 @@
       "email": "kanhlinh@gmail.com",
       "avt": "https://images.unsplash.com/photo-1618417759257-7e6dbed9f115?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
       "follow": 99,
-      "follower": 99
+      "follower": 99,
+      "postsave": [
+        2,
+        3,
+        1,
+        5
+      ]
     },
     {
       "id": 5,
@@ -48,7 +73,13 @@
       "email": "hnhung@gmail.com",
       "avt": "https://images.unsplash.com/photo-1620591314915-528aeda98e38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "follow": 99,
-      "follower": 99
+      "follower": 99,
+      "postsave": [
+        2,
+        3,
+        4,
+        1
+      ]
     },
     {
       "id": 6,
@@ -58,7 +89,13 @@
       "email": "meomeo@gmail.com",
       "avt": "https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
       "follow": 99,
-      "follower": 99
+      "follower": 99,
+      "postsave": [
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": 7,
@@ -68,7 +105,13 @@
       "email": "lewlew@gmail.com",
       "avt": "https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
       "follow": 99,
-      "follower": 99
+      "follower": 99,
+      "postsave": [
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": 8,
@@ -78,7 +121,13 @@
       "email": "ntrinh@gmail.com",
       "avt": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
       "follow": 99,
-      "follower": 99
+      "follower": 99,
+      "postsave": [
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": 9,
@@ -88,12 +137,18 @@
       "email": "hoaian@gmail.com",
       "avt": "https://images.unsplash.com/photo-1440589473619-3cde28941638?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
       "follow": 99,
-      "follower": 99
+      "follower": 99,
+      "postsave": [
+        2,
+        3,
+        4,
+        5
+      ]
     }
   ],
   "user_login": [
     {
-      "userid": 1,
+      "userId": 1,
       "username": "phofng",
       "password": "123",
       "name": "Nguyễn Đăng Phòng",
@@ -111,8 +166,43 @@
       "img": "https://images.unsplash.com/photo-1611095973763-414019e72400?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
       "title": "Stay safe and healthy, my HaNoi.",
       "time": "test",
-      "like": "[5,6,8,7,9]",
-      "comment": "[{use id: 1; title: Mình xinh quá;like:[1,5,6,8,9]}]"
+      "like": "[2,5,6,8,7,9]",
+      "comment": [
+        {
+          "userId": 1,
+          "title": "Mình xinh quá"
+        },
+        {
+          "userId": 2,
+          "title": "uầy xinh thế"
+        },
+        {
+          "userId": 3,
+          "title": "Hâm"
+        },
+        {
+          "userId": 2,
+          "title": "haha"
+        },
+        {
+          "userId": 2,
+          "title": "haha"
+        },
+        {
+          "userId": 2,
+          "title": "hâm lắm hahaha"
+        },
+        {
+          "userId": 2,
+          "title": "test"
+        }
+      ],
+      "save": [
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": 2,
@@ -121,7 +211,30 @@
       "title": "Một chút trà cho tâm hồn thanh thản",
       "time": "8 giờ trước",
       "like": "[1,5,6,8,7,9]",
-      "comment": ""
+      "comment": [
+        {
+          "userId": 1,
+          "title": "Mình xinh quá"
+        },
+        {
+          "userId": 2,
+          "title": "uầy xinh thế"
+        },
+        {
+          "userId": 3,
+          "title": "Hâm"
+        }
+      ],
+      "save": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
     },
     {
       "id": 3,
@@ -129,8 +242,35 @@
       "img": "/instagram-home/assets/image/post_2.jpg",
       "title": "hoa baby tượng trưng cho ty chúng ta",
       "time": "9h trước",
-      "like": "[2,3,5,6,8,7,9]",
-      "comment": ""
+      "like": "[3,5,6,8,7,9]",
+      "comment": [
+        {
+          "userId": 1,
+          "title": "Mình xinh quá"
+        },
+        {
+          "userId": 2,
+          "title": "uầy xinh thế"
+        },
+        {
+          "userId": 3,
+          "title": "Hâm"
+        },
+        {
+          "userId": 2,
+          "title": "alo"
+        }
+      ],
+      "save": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
     },
     {
       "id": 4,
@@ -138,8 +278,39 @@
       "img": "/instagram-home/assets/image/image_post.jpg",
       "title": "flow",
       "time": "10h trước",
-      "like": "[2,5,5,6,8,7,9]",
-      "comment": "[{use id: 4; title: Mình xinh quá;like:[1,5,6,8,9]}]"
+      "like": "[5,5,6,8,7,9]",
+      "comment": [
+        {
+          "userId": 1,
+          "title": "Mình xinh quá"
+        },
+        {
+          "userId": 2,
+          "title": "uầy xinh thế"
+        },
+        {
+          "userId": 3,
+          "title": "Hâm"
+        },
+        {
+          "userId": 2,
+          "title": "hahah"
+        },
+        {
+          "userId": 2,
+          "title": "hahaha"
+        }
+      ],
+      "save": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
     },
     {
       "id": 5,
@@ -148,7 +319,30 @@
       "title": "flow",
       "time": "10h trước",
       "like": "[1,2,3,5,4,6,5,8]",
-      "comment": "[{use id: 4; title: Mình xinh quá;like:[1,5,6,8,9]}]"
+      "comment": [
+        {
+          "userId": 1,
+          "title": "Mình xinh quá"
+        },
+        {
+          "userId": 2,
+          "title": "uầy xinh thế"
+        },
+        {
+          "userId": 3,
+          "title": "Hâm"
+        }
+      ],
+      "save": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
     }
   ]
 }

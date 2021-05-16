@@ -1,4 +1,8 @@
-// const api = `https://sheetdb.io/api/v1/6vygm913c6rtj`;
+
+// icon:
+const iconSaveBlack = `<svg aria-label="Gỡ" class="_8-yf5 " fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 28.9 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1z"></path></svg>`
+const iconSaveWhite = `<svg aria-label="Lưu" class="_8-yf5 " fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z"></path></svg>`
+// api:
 const api = `http://localhost:3000`;
 
 // Dom :
@@ -13,6 +17,7 @@ const sliderR = document.querySelector(`.main__slider .main__slider-items`);
 
 
 
+
 async function getUserLogin() {
     let userId;
     await fetch(api + `/user_login`)
@@ -20,14 +25,13 @@ async function getUserLogin() {
         .then((json) => {
             if (json.length === 1) {
                 userId = json[0].userId
-                console.log(userId);
             }
         });
     getDataUser(userId)
 }
-async function getDataUser(userId) {
+function getDataUser(userId) {
     if (userId !== undefined) {
-        await fetch(api + `/User`)
+        fetch(api + `/User`)
             .then((response) => response.json())
             .then((json) => {
                 getPosts(json, userId)
@@ -117,6 +121,9 @@ function getPosts(user, userId) {
     const postE = document.querySelector(`.main__posts-container`);
     let listUser = {};
     let likes = {};
+    let listComments = {};
+    let listSaves = {};
+    let listPostSaves = {};
     user.map((e) => {
         listUser[e.id] = e.username;
         listUser[`avt${e.id}`] = e.avt;
@@ -124,8 +131,26 @@ function getPosts(user, userId) {
     fetch(api + `/post`)
         .then(response => response.json())
         .then(json => {
+
             let postItems = []
+            user.forEach((element => {
+                listPostSaves[userId] = element.postsave
+            }))
             json.forEach((e) => {
+                listComments[e.id] = e.comment;
+                listSaves[e.id] = e.save;
+                let arrCommentHTML = []
+                let commentHTML;
+                let saveHTML;
+                if (e.save.find(element => element == userId) == undefined) {
+                    saveHTML = `<button class="main__post-content-icon" id="main__post-icon-save">${iconSaveWhite}</button>`;
+                } else {
+                    saveHTML = `<button class="main__post-content-icon action" id="main__post-icon-save">${iconSaveBlack}</button>`
+                }
+                e.comment.forEach((element) => {
+                    arrCommentHTML.push(`<div><a href= "../html/index.html">${listUser[element.userId]}</a> ${element.title}</div>`)
+                })
+                commentHTML = arrCommentHTML.join("")
                 if (e.userId !== userId) {
                     like = JSON.parse(e.like);
                     likes[e.id] = JSON.parse(e.like);
@@ -184,14 +209,7 @@ function getPosts(user, userId) {
                                 </path>
                             </svg>
                         </button>
-                        <button class="main__post-content-icon" id="main__post-icon-save">
-                            <svg aria-label="Lưu" class="_8-yf5 " fill="#262626" height="24" viewBox="0 0 48 48"
-                                width="24">
-                                <path
-                                    d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
-                                </path>
-                            </svg>
-                        </button>
+                        ${saveHTML}
                     </section>
                     <section class="main__post-content-likes">
                         <span class="main__post-content-profile">
@@ -207,7 +225,7 @@ function getPosts(user, userId) {
                             ${e.title}
                         </span>
                     </div>
-                    <div></div>
+                    <div class= "main__post-content-title" style="display: flex;flex-direction: column;">${commentHTML}</div>
                     <div class="main__post-content-time">
                         ${e.time}
                     </div>
@@ -278,14 +296,8 @@ function getPosts(user, userId) {
                                 </path>
                             </svg>
                         </button>
-                        <button class="main__post-content-icon" id="main__post-icon-save">
-                            <svg aria-label="Lưu" class="_8-yf5 " fill="#262626" height="24" viewBox="0 0 48 48"
-                                width="24">
-                                <path
-                                    d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
-                                </path>
-                            </svg>
-                        </button>
+                        ${saveHTML}
+
                     </section>
                     <section class="main__post-content-likes">
                         <span class="main__post-content-profile">
@@ -301,7 +313,7 @@ function getPosts(user, userId) {
                             ${e.title}
                         </span>
                     </div>
-                    <div></div>
+                    <div class= "main__post-content-title" style="display: flex;flex-direction: column;">${commentHTML}</div>
                     <div class="main__post-content-time">
                         ${e.time}
                     </div>
@@ -328,20 +340,23 @@ function getPosts(user, userId) {
                 }
             })
             postE.innerHTML = postItems.join("");
-            interaction(likes, userId);
+            interaction(likes, userId, listUser, listComments, listSaves, listPostSaves);
+            console.log(listSaves);
+            console.log(listPostSaves);
+
         })
 
 }
-function interaction(likes, userId) {
+function interaction(likes, userId, listUser, listComments, listSaves, listPostSaves) {
     const postContainer = document.querySelector(`.main__posts-container`);
     let valuePost;
-    let comment;
+
     postContainer.onclick = (e) => {
 
         let a = e.target.parentElement;
         while (e.target.parentElement) {
 
-            comments(e, a);
+            comments(e, a, userId, listUser, listComments);
 
             // đổi màu nút like
             // từ trắng thành đỏ
@@ -352,9 +367,7 @@ function interaction(likes, userId) {
                     if (a.classList[0] == `main__post-container`) {
                         valuePost = a.attributes[1].value;
                         likes[valuePost].unshift(userId)
-
-                        fetchPost(valuePost, likes[valuePost], e)
-
+                        fetchPost(valuePost, likes[valuePost])
                         break
                     }
                     a = a.parentElement;
@@ -377,7 +390,7 @@ function interaction(likes, userId) {
                         likes[valuePost].splice(b, 1);
 
 
-                        fetchPost(valuePost, likes[valuePost], e)
+                        fetchPost(valuePost, likes[valuePost])
                         break
                     }
                     a = a.parentElement;
@@ -389,13 +402,46 @@ function interaction(likes, userId) {
             // từ trắng thành đen
             if (a.classList[1] == undefined && a.id == `main__post-icon-save`) {
                 a.classList.add(`action`)
-                a.innerHTML = `<svg aria-label="Gỡ" class="_8-yf5 " fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 28.9 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1z"></path></svg>`
+                a.innerHTML = iconSaveBlack;
+                while (a.parentElement) {
+                    if (a.classList[0] == `main__post-container`) {
+                        valuePost = a.attributes[1].value;
+                        listSaves[valuePost].unshift(userId);
+                        listPostSaves[userId].unshift(Number(valuePost));
+                        // console.log(listPostSaves);
+                        fetchSaves(listSaves[valuePost], valuePost);
+                        fetchPostSaves(listPostSaves[userId], userId);
+                        break
+                    }
+                    a = a.parentElement;
+                }
                 break
             }
             // từ đen thành trắng
             else if (a.classList[1] == `action` && a.id == `main__post-icon-save`) {
                 a.classList.remove(`action`)
-                a.innerHTML = `<svg aria-label="Lưu" class="_8-yf5 " fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z"></path></svg>`
+                a.innerHTML = iconSaveWhite;
+                while (a.parentElement) {
+                    if (a.classList[0] == `main__post-container`) {
+                        valuePost = a.attributes[1].value;
+                        listSaves[valuePost].forEach((e, i) => {
+                            if (e == userId) {
+                                b = i
+                            }
+                        });
+                        listPostSaves[userId].forEach((e, i) => {
+                            if (e == valuePost) {
+                                c = i
+                            }
+                        });
+                        listSaves[valuePost].splice(b, 1);
+                        listPostSaves[userId].splice(c, 1);
+                        fetchSaves(listSaves[valuePost], valuePost);
+                        fetchPostSaves(listPostSaves[userId], userId);
+                        break
+                    }
+                    a = a.parentElement;
+                }
                 break
             }
             if (a.classList[0] == `main__post-container`) {
@@ -410,8 +456,7 @@ function interaction(likes, userId) {
 
 
 // đoạn này a
-function fetchPost(valuePost, likePost, e) {
-    e.preventDefault()
+function fetchPost(valuePost, likePost) {
     fetch(api + `/post/${valuePost}`, {
         method: 'PATCH',
         body: JSON.stringify({
@@ -431,14 +476,69 @@ function fetchPost(valuePost, likePost, e) {
 
 
 
-function comments(e, a) {
+function comments(e, a, userId, listUser, listComments) {
+    let comment;
+
     if (e.target.type == `submit`) {
+        if (e.target.parentElement[1].tagName == `TEXTAREA`) {
+            comment = e.target.parentElement[1].value;
+        }
+
         if (a.classList[0] == `main__post-container`) {
-            console.log(a.children[3].children[3]);
+            if (comment !== '') {
+                a.children[3].children[3].appendChild(document.createElement('div')).innerHTML = `<a href= "../html/index.html">${listUser[userId]}</a> ${comment}`
+                listComments[a.attributes[1].value].push({
+                    userId: userId,
+                    title: comment
+                })
+                e.target.parentElement[1].value = '';
+                fetchComment(a.attributes[1].value, listComments[a.attributes[1].value])
+            }
+
         }
     }
 }
+function fetchComment(valuePost, valueComment) {
+    fetch(api + `/post/${valuePost}`, {
+        method: 'PATCH',
+        body: JSON.stringify({
+            "comment": valueComment,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+}
+function fetchSaves(data, id) {
+    fetch(api + `/post/${id}`, {
+        method: 'PATCH',
+        body: JSON.stringify({
+            "save": data,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
 
+}
+function fetchPostSaves(data, id) {
+    fetch(api + `/User/${id}`, {
+        method: 'PATCH',
+        body: JSON.stringify({
+            "postsave": data,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+
+}
 
 
 
