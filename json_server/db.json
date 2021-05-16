@@ -7,8 +7,17 @@
       "name": "Nguyễn Đăng Phòng",
       "email": "nguyendangphong2712@gmail.com",
       "avt": "https://images.unsplash.com/photo-1611095973763-414019e72400?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
-      "follow": 99,
-      "follower": 99,
+      "follow": [
+        9,
+        7,
+        8,
+        5,
+        3,
+        2,
+        6,
+        4
+      ],
+      "follower": [],
       "postsave": [
         2,
         3,
@@ -23,8 +32,10 @@
       "name": "Phương Anh",
       "email": "phuonganh@gmail.com",
       "avt": "https://images.unsplash.com/photo-1593642532744-d377ab507dc8?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      "follow": 99,
-      "follower": 99,
+      "follow": [],
+      "follower": [
+        1
+      ],
       "postsave": [
         1,
         2,
@@ -40,8 +51,10 @@
       "name": "Như Ngọc",
       "email": "nhungoc@gmail.com",
       "avt": "https://images.unsplash.com/photo-1620734885969-a3c21e9f34c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1101&q=80",
-      "follow": 99,
-      "follower": 99,
+      "follow": [],
+      "follower": [
+        1
+      ],
       "postsave": [
         2,
         1,
@@ -56,8 +69,10 @@
       "name": "Khánh Linh",
       "email": "kanhlinh@gmail.com",
       "avt": "https://images.unsplash.com/photo-1618417759257-7e6dbed9f115?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-      "follow": 99,
-      "follower": 99,
+      "follow": [],
+      "follower": [
+        1
+      ],
       "postsave": [
         2,
         3,
@@ -72,8 +87,10 @@
       "name": "Hồng Nhung",
       "email": "hnhung@gmail.com",
       "avt": "https://images.unsplash.com/photo-1620591314915-528aeda98e38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-      "follow": 99,
-      "follower": 99,
+      "follow": [],
+      "follower": [
+        1
+      ],
       "postsave": [
         2,
         3,
@@ -88,8 +105,10 @@
       "name": "Mew Mew",
       "email": "meomeo@gmail.com",
       "avt": "https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-      "follow": 99,
-      "follower": 99,
+      "follow": [],
+      "follower": [
+        1
+      ],
       "postsave": [
         2,
         3,
@@ -104,8 +123,10 @@
       "name": "Lew Lew",
       "email": "lewlew@gmail.com",
       "avt": "https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-      "follow": 99,
-      "follower": 99,
+      "follow": [],
+      "follower": [
+        1
+      ],
       "postsave": [
         2,
         3,
@@ -120,8 +141,10 @@
       "name": "Ngọc Trinh",
       "email": "ntrinh@gmail.com",
       "avt": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-      "follow": 99,
-      "follower": 99,
+      "follow": [],
+      "follower": [
+        1
+      ],
       "postsave": [
         2,
         3,
@@ -136,8 +159,10 @@
       "name": "Hoài An",
       "email": "hoaian@gmail.com",
       "avt": "https://images.unsplash.com/photo-1440589473619-3cde28941638?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-      "follow": 99,
-      "follower": 99,
+      "follow": [],
+      "follower": [
+        1
+      ],
       "postsave": [
         2,
         3,
@@ -154,8 +179,8 @@
       "name": "Nguyễn Đăng Phòng",
       "email": "nguyendangphong2712@gmail.com",
       "avt": "https://images.unsplash.com/photo-1611095973763-414019e72400?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
-      "follow": 99,
-      "follower": 99,
+      "follow": [],
+      "follower": [],
       "id": 1
     }
   ],
@@ -223,6 +248,10 @@
         {
           "userId": 3,
           "title": "Hâm"
+        },
+        {
+          "userId": 1,
+          "title": "chung"
         }
       ],
       "save": [
