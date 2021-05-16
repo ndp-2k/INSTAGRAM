@@ -26,7 +26,7 @@ function updateOnline(a) {
     fetch('http://localhost:3000/user_login/1', {
         method: 'PUT',
         body: JSON.stringify({
-            userid: a.id,
+            userId: a.id,
             username: a.username,
             password:a.password,
             name:a.name,
