@@ -88,7 +88,41 @@ updown.onclick = function() {
 }
 
 modalAll.onclick = function() {
-    // exampleModal2.classList.add("delete")
-    // exam.classList.add("delete")
     exampleModal2.classList.remove("show")
 }
+
+const sliderItems = document.querySelector(`.main__slider-items`);
+console.log(sliderItems);
+const sliderArrowLeft = document.querySelector(`.main__slider-arrow-left`);
+const sliderArrowRight = document.querySelector(`.main__slider-arrow-right`);
+function slider() {
+    let x = 0;
+    sliderItems.style = `transform: translateX(${x}px)`;
+    let items = sliderItems.children.length;
+    numberRuns = Math.floor(items / 4) ;
+    numberRun = 0;
+    sliderArrowLeft.style = `display:none`;
+    sliderArrowRight.onclick = () => {
+        sliderItems.style = `transform: translateX(${x - 800}px)`;
+        sliderArrowLeft.style = `display:block`;
+        x -= 800;
+        numberRuns -= 1;
+        if (numberRuns == 0) {
+            sliderArrowRight.style = `display:none`
+        }
+        numberRun += 1;
+
+    }
+    sliderArrowLeft.onclick = () => {
+        sliderItems.style = `transform: translateX(${x + 800}px)`;
+        sliderArrowRight.style = `display:block`;
+        x += 800;
+        numberRun -= 1;
+        if (numberRuns == numberRun || numberRun == 0) {
+            sliderArrowLeft.style = `display:none`
+        }
+        numberRuns +=1;
+
+    }
+}
+slider();
