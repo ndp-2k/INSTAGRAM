@@ -200,6 +200,18 @@
       "follower": [],
       "id": 1
     }
+  ],"friend": [
+    {
+      "userId": 10,
+      "username": "phofngg",
+      "password": "hi",
+      "name": "Nguyễn Tiến Quyết",
+      "email": "0355182218",
+      "avt": "https://i.pinimg.com/originals/3c/ae/61/3cae61dec3a7b4b8ce29b810488dc19d.jpg",
+      "follow": [],
+      "follower": [],
+      "id": 1
+    }
   ],
   "post": [
     {
@@ -528,12 +540,6 @@
         8,
         9
       ]
-    }
-  ],
-  "friend": [
-    {
-      "id": 1,
-      "userId": 1
     }
   ]
 }
