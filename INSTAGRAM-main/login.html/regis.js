@@ -25,7 +25,7 @@ regis.onclick = function () {
                         name: name,
                         username: username,
                         password: password,
-                        avt: "https://i.pinimg.com/originals/3c/ae/61/3cae61dec3a7b4b8ce29b810488dc19d.jpg",
+                        avt: "https://images.unsplash.com/photo-1504433374832-4fcf45f40967?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80&fbclid=IwAR1TYRbLjMqW70afytajLz-OLaIyqqO47dLlfLY0mcAMa2oLOf4NatUr290",
                         follow: [
 
                         ],
