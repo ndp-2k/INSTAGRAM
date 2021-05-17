@@ -14,7 +14,16 @@ const popupAccAvt = document.querySelector(`.popUpAcc__content-item .header__spa
 const popupAccProfile = document.querySelector(`.popUpAcc__content-item .main__right-heading-content-profile`);
 const flowR = document.querySelector(`.main__right-content-items`);
 const sliderR = document.querySelector(`.main__slider .main__slider-items`);
+console.log(flowR);
 
+// data:
+let listUser = {};
+let likes = {};
+let listComments = {};
+let listSaves = {};
+let listPostSaves = {};
+let follows = {};
+let followers = {};
 
 
 
@@ -37,9 +46,12 @@ function getDataUser(userId) {
                 getPosts(json, userId)
                 let acc = [];
                 let sliders = [];
+                console.log(json);
                 json.forEach((e) => {
                     if (e.id === userId) {
+                        console.log(e);
 
+                        follows[userId] = e.follow;
                         avtHeader.innerHTML = `<img alt="Ảnh đại diện của ${e.username}" class="h-100 " crossorigin="anonymous"
                         data-testid="user-avatar" draggable="false" src="${e.avt}">`;
                         avtR.innerHTML = `<img alt="Ảnh đại diện của ${e.username}" class="h-100 " crossorigin="anonymous"
@@ -49,7 +61,9 @@ function getDataUser(userId) {
                         profileR.textContent = e.username;
                         popupAccProfile.textContent = e.username;
                         userNameR.textContent = e.name;
-                    } else {
+                    }
+                    if (e.id !== userId && follows[userId].find(element => element == e.id) == undefined) {
+
                         acc.push(`<div class="main__right-content-item">
                         <div class="main__right-content-outline"></div>
                         <span class="header__span-img" role="link"
@@ -63,8 +77,10 @@ function getDataUser(userId) {
                             </a>
                             <div class="main__right-heading-content-name fz12">Theo dõi bạn</div>
                         </div>
-                        <button class="main__right-heading-end ">Theo dõi</button>
+                        <button class="main__right-heading-end" value="${e.id}">Theo dõi</button>
                     </div>`);
+
+                    } else if (e.id !== userId && follows[userId].find(element => element == e.id) !== undefined) {
                         sliders.push(`<li class="main__slider-item">
                         <div class="main__right-content-outline"></div>
                         <span class="header__span-img" role="link"
@@ -81,11 +97,79 @@ function getDataUser(userId) {
                 flowR.innerHTML = acc.join('');
                 sliderR.innerHTML = sliders.join('');
                 slider();
-
+                console.log(follows);
+                following(userId, json)
             });
     };
 }
 getUserLogin()
+
+// folow vs folower
+function following(userId, listusers) {
+
+    flowR.onclick = (e) => {
+        console.log(e.target.classList[0]);
+        if (e.target.value && e.target.classList[0] == `main__right-heading-end`) {
+            listusers.forEach((element) => {
+                if (element.id == e.target.value) {
+                    followers[element.id] = element.follower
+                }
+            })
+            if (follows[userId].find(element => element == e.target.value) !== undefined) {
+                follows[userId].forEach((element, index) => {
+                    if (element == e.target.value) {
+                        b = index;
+                    }
+                })
+                followers[e.target.value].forEach((element, index) => {
+                    if (element == userId) {
+                        c = index;
+                    }
+                })
+                e.target.style = `color:#20a2f6`
+                e.target.textContent = `Theo dõi`
+                follows[userId].splice(b, 1)
+                followers[e.target.value].splice(c, 1)
+
+                fetchFollows(follows[userId], userId)
+                fetchFollowers(followers[e.target.value], e.target.value)
+            } else {
+                e.target.style = `color:black`
+                e.target.textContent = `Đang theo dõi`
+                follows[userId].unshift(Number(e.target.value))
+                followers[e.target.value].unshift(userId);
+                fetchFollows(follows[userId], userId)
+                fetchFollowers(followers[e.target.value], e.target.value)
+            }
+        }
+    }
+}
+function fetchFollows(data, userId) {
+    fetch(api + `/User/${userId}`, {
+        method: `PATCH`,
+        body: JSON.stringify({
+            follow: data,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+}
+function fetchFollowers(data, userId) {
+    fetch(api + `/User/${userId}`, {
+        method: `PATCH`,
+        body: JSON.stringify({
+            follower: data,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+}
 // slider:
 const sliderItems = document.querySelector(`.main__slider-items`);
 const sliderArrowLeft = document.querySelector(`.main__slider-arrow-left`);
@@ -97,6 +181,9 @@ function slider() {
     numberRuns = Math.floor(items / 4) - 1;
     numberRun = Math.floor(items / 4) - 1;
     sliderArrowLeft.style = `display:none`;
+    if (items < 8) {
+        sliderArrowRight.style = `display:none`;
+    }
     sliderArrowRight.onclick = () => {
         sliderItems.style = `transform: translateX(${x - 320}px)`;
         sliderArrowLeft.style = `display:block`;
@@ -119,11 +206,6 @@ function slider() {
 // post :
 function getPosts(user, userId) {
     const postE = document.querySelector(`.main__posts-container`);
-    let listUser = {};
-    let likes = {};
-    let listComments = {};
-    let listSaves = {};
-    let listPostSaves = {};
     user.map((e) => {
         listUser[e.id] = e.username;
         listUser[`avt${e.id}`] = e.avt;
@@ -163,7 +245,7 @@ function getPosts(user, userId) {
                             data-testid="user-avatar" draggable="false" src="${listUser[`avt${e.userId}`]}">
                     </span>
                     <span class="main__post-profile">
-                        <a href="./index.html">${listUser[e.userId]}</a>
+                        <a href="../ban be/friend.html">${listUser[e.userId]}</a>
                     </span>
                     <div class="main__post-action">
                         <svg aria-label="Tùy chọn khác" class="_8-yf5 " fill="#262626" height="16"
@@ -257,7 +339,7 @@ function getPosts(user, userId) {
                             data-testid="user-avatar" draggable="false" src="${listUser[`avt${e.userId}`]}">
                     </span>
                     <span class="main__post-profile">
-                        <a href="./index.html">${listUser[e.userId]}</a>
+                        <a href="../ban be/friend.html">${listUser[e.userId]}</a>
                     </span>
                     <div class="main__post-action">
                         <svg aria-label="Tùy chọn khác" class="_8-yf5 " fill="#262626" height="16"
@@ -341,8 +423,7 @@ function getPosts(user, userId) {
             })
             postE.innerHTML = postItems.join("");
             interaction(likes, userId, listUser, listComments, listSaves, listPostSaves);
-            console.log(listSaves);
-            console.log(listPostSaves);
+
 
         })
 
@@ -408,7 +489,6 @@ function interaction(likes, userId, listUser, listComments, listSaves, listPostS
                         valuePost = a.attributes[1].value;
                         listSaves[valuePost].unshift(userId);
                         listPostSaves[userId].unshift(Number(valuePost));
-                        // console.log(listPostSaves);
                         fetchSaves(listSaves[valuePost], valuePost);
                         fetchPostSaves(listPostSaves[userId], userId);
                         break
@@ -539,6 +619,7 @@ function fetchPostSaves(data, id) {
         .then((json) => console.log(json));
 
 }
+
 
 
 
