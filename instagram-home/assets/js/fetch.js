@@ -14,7 +14,6 @@ const popupAccAvt = document.querySelector(`.popUpAcc__content-item .header__spa
 const popupAccProfile = document.querySelector(`.popUpAcc__content-item .main__right-heading-content-profile`);
 const flowR = document.querySelector(`.main__right-content-items`);
 const sliderR = document.querySelector(`.main__slider .main__slider-items`);
-console.log(flowR);
 
 // data:
 let listUser = {};
@@ -46,11 +45,8 @@ function getDataUser(userId) {
                 getPosts(json, userId)
                 let acc = [];
                 let sliders = [];
-                console.log(json);
                 json.forEach((e) => {
                     if (e.id === userId) {
-                        console.log(e);
-
                         follows[userId] = e.follow;
                         avtHeader.innerHTML = `<img alt="Ảnh đại diện của ${e.username}" class="h-100 " crossorigin="anonymous"
                         data-testid="user-avatar" draggable="false" src="${e.avt}">`;
@@ -62,6 +58,8 @@ function getDataUser(userId) {
                         popupAccProfile.textContent = e.username;
                         userNameR.textContent = e.name;
                     }
+                })
+                json.forEach((e) => {
                     if (e.id !== userId && follows[userId].find(element => element == e.id) == undefined) {
 
                         acc.push(`<div class="main__right-content-item">
@@ -72,7 +70,7 @@ function getDataUser(userId) {
                                 data-testid="user-avatar" draggable="false" src="${e.avt}">
                         </span>
                         <div class="main__right-heading-content">
-                            <a href="../ban be/friend.html">
+                            <a href="../ban be/friend.html" onclick="fetchFriend(${e.id})">
                                 <div class="main__right-heading-content-profile">${e.username}</div>
                             </a>
                             <div class="main__right-heading-content-name fz12">Theo dõi bạn</div>
@@ -95,9 +93,13 @@ function getDataUser(userId) {
                     }
                 })
                 flowR.innerHTML = acc.join('');
-                sliderR.innerHTML = sliders.join('');
+                if (sliders.length == 0) {
+                    sliderR.parentElement.style = `display:none`
+                } else {
+                    sliderR.innerHTML = sliders.join('');
+                }
+
                 slider();
-                console.log(follows);
                 following(userId, json)
             });
     };
@@ -108,7 +110,6 @@ getUserLogin()
 function following(userId, listusers) {
 
     flowR.onclick = (e) => {
-        console.log(e.target.classList[0]);
         if (e.target.value && e.target.classList[0] == `main__right-heading-end`) {
             listusers.forEach((element) => {
                 if (element.id == e.target.value) {
@@ -213,12 +214,11 @@ function getPosts(user, userId) {
     fetch(api + `/post`)
         .then(response => response.json())
         .then(json => {
-
             let postItems = []
-            user.forEach((element => {
+            user.forEach(((element, index) => {
                 listPostSaves[userId] = element.postsave
             }))
-            json.forEach((e) => {
+            json.forEach((e, index) => {
                 listComments[e.id] = e.comment;
                 listSaves[e.id] = e.save;
                 let arrCommentHTML = []
@@ -245,7 +245,7 @@ function getPosts(user, userId) {
                             data-testid="user-avatar" draggable="false" src="${listUser[`avt${e.userId}`]}">
                     </span>
                     <span class="main__post-profile">
-                        <a href="../ban be/friend.html">${listUser[e.userId]}</a>
+                        <a href="../ban be/friend.html" onclick="fetchFriend(${e.userId})">${listUser[e.userId]}</a>
                     </span>
                     <div class="main__post-action">
                         <svg aria-label="Tùy chọn khác" class="_8-yf5 " fill="#262626" height="16"
@@ -339,7 +339,7 @@ function getPosts(user, userId) {
                             data-testid="user-avatar" draggable="false" src="${listUser[`avt${e.userId}`]}">
                     </span>
                     <span class="main__post-profile">
-                        <a href="../ban be/friend.html">${listUser[e.userId]}</a>
+                        <a href="../ban be/friend.html" onclick="fetchFriend(${e.userId})">${listUser[e.userId]}</a>
                     </span>
                     <div class="main__post-action">
                         <svg aria-label="Tùy chọn khác" class="_8-yf5 " fill="#262626" height="16"
@@ -610,6 +610,20 @@ function fetchPostSaves(data, id) {
         method: 'PATCH',
         body: JSON.stringify({
             "postsave": data,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+
+}
+function fetchFriend(data) {
+    fetch(api + `/friend/1`, {
+        method: 'PATCH',
+        body: JSON.stringify({
+            "userId": data,
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
