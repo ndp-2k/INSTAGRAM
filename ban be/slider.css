@@ -1,0 +1,30 @@
+.grp{
+    overflow-x: hidden;
+    margin-left: -26px;
+}
+.grp .main__slider{
+    height: auto;
+    width: 935px;
+    max-width: 935px;
+    border: 0;
+}
+.grp .pt{
+    padding-top: 0 !important;
+}
+.grp.main__container{
+    padding-top: 0;
+}
+.grp .main__content{
+    width: 900px;
+    margin-right: 0;
+}
+.grp .main__slider-items{
+    height: auto;
+    display: flex;
+}
+.grp .main__slider .card{
+    margin-right: 0;
+}
+.suggest-updown{
+    margin-bottom: 30px;
+}
