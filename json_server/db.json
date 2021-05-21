@@ -41,11 +41,7 @@
         1
       ],
       "postsave": [
-        1,
-        2,
-        3,
-        4,
-        5
+        1
       ]
     },
     {
@@ -190,19 +186,32 @@
   ],
   "user_login": [
     {
-      "userId": 10,
-      "username": "phofngg",
-      "password": "hi",
-      "name": "Nguyễn Tiến Quyết",
-      "email": "0355182218",
-      "avt": "https://i.pinimg.com/originals/3c/ae/61/3cae61dec3a7b4b8ce29b810488dc19d.jpg",
-      "follow": [],
-      "follower": [],
+      "userId": 1,
+      "username": "phofng",
+      "password": "123",
+      "name": "Nguyễn Đăng Phòng",
+      "email": "nguyendangphong2712@gmail.com",
+      "avt": "https://images.unsplash.com/photo-1611095973763-414019e72400?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      "follow": [
+        9,
+        7,
+        8,
+        5,
+        3,
+        2,
+        6,
+        4
+      ],
+      "follower": [
+        7,
+        2
+      ],
       "id": 1
     }
-  ],"friend": [
+  ],
+  "friend": [
     {
-      "userId": 10,
+      "userId": 3,
       "username": "phofngg",
       "password": "hi",
       "name": "Nguyễn Tiến Quyết",
@@ -319,8 +328,8 @@
         }
       ],
       "save": [
-        1,
         2,
+        1,
         4,
         5,
         6,
