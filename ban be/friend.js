@@ -99,6 +99,8 @@ const api = `http://localhost:3000`;
 let listUsers;
 let listUserLogins;
 let postFriend = [];
+let listFollow = [];
+let listFollows = [];
 
 // logic
 async function callUserId() {
@@ -213,43 +215,46 @@ function renderPost(userFriendInfor) {
     }
 }
 function renderFlow(id, userIdInfor, userFriendInfor) {
-    console.log(userFriendInfor);
+
     // Dom:
     const listBtn = document.querySelector(`.list-btn`);
 
+
     if (userIdInfor.follow.find((e) => e == id)) {
-        listBtn.children[1].innerHTML = `<a class="info-follow" href="#">
+        listBtn.children[1].setAttribute("onclick", `unFollows(${id},${userIdInfor.id})`)
+        listBtn.children[1].innerHTML = `<a class="info-follow" href="#" ">
         <div class="info-follow-icon"></div>
-    </a>
-    <div class="modal fade" id="addFollow" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true" >
-        <div class="modal-dialog">
-            <div class="modal-content-fix ">
-                <ul class="fix">
-                    <li class="info-btn">
-                        <img src="${userFriendInfor.avt}" style="width: 90px; height: 90px;border-radius: 50%"
-                            alt="ảnh đại diện của ${userFriendInfor.username}">
-                    </li>
-                    <li class="info-unFl">
-                        <div>Nếu thay đổi quyết định, bạn sẽ phải yêu cầu theo dõi lại
-                            @${userFriendInfor.username}.</div>
-                    </li>
-                    <li class="info-text" onclick="fetchFlow(${id},${userIdInfor.id})">Bỏ theo dõi</li>
-                    <li><button>Hủy</button></li>
-                </ul>
-            </div>
-        </div>
-    </div>`;
-        const unfollow = document.getElementById(`addFollow`);
-        console.log(unfollow);
-        unfollow.onclick = (e) => {
-            console.log(e.target);
-        }
+    </a>`;
+
     } else {
+        listBtn.children[1].setAttribute("onclick", `follows(${id},${userIdInfor.id})`)
+
         listBtn.children[1].style = `background-color:#0095f6`;
         listBtn.children[2].style = `background-color:#0095f6`;
         listBtn.children[2].children[0].style = `color:white`;
         listBtn.children[1].innerHTML = `<a class="info-follow" href="#" style="width: 100px;color: #fff;">Theo dõi</a>`;
     }
 }
-
+function unFollows(id, userId) {
+    const listBtn = document.querySelector(`.list-btn`);
+    console.log(id);
+    console.log(userId);
+    listBtn.children[1].removeAttribute("onclick")
+    listBtn.children[1].setAttribute("onclick", `follows(${id},${userIdInfor.id})`)
+    listBtn.children[1].style = `background-color:#0095f6`;
+    listBtn.children[2].style = `background-color:#0095f6`;
+    listBtn.children[2].children[0].style = `color:white`;
+    listBtn.children[1].innerHTML = `<a class="info-follow" href="#" style="width: 100px;color: #fff;">Theo dõi</a>`;
+}
+function follows(id, userId) {
+    const listBtn = document.querySelector(`.list-btn`);
+    listBtn.children[1].removeAttribute("onclick")
+    listBtn.children[1].style = `background-color:#fff`;
+    listBtn.children[2].style = `background-color:#fff`;
+    listBtn.children[2].children[0].style = `color:#000`;
+    listBtn.children[1].setAttribute("onclick", `unFollows(${id},${userIdInfor.id})`)
+    listBtn.children[1].innerHTML = `<a class="info-follow" href="#" ">
+        <div class="info-follow-icon"></div>
+    </a>`;
+    console.log(`a`);
+}
